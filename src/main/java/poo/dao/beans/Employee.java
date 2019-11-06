@@ -49,7 +49,7 @@ public class Employee {
 	}
 	
 /*
-	public Date getBithDate() {
+	public Date getBirthDate() {
 		return Date.from()
 	}
 */

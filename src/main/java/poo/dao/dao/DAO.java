@@ -1,5 +1,6 @@
 package poo.dao.dao;
 
+import java.sql.SQLException;
 import java.util.Collection;
 
 public interface DAO<T> {
@@ -9,7 +10,7 @@ public interface DAO<T> {
 	
 	T update(T object); //UPDATE
 	
-	boolean delete(T object); //DELETE
+	boolean delete(T object) throws SQLException; //DELETE
 	
 	void saveAll(Collection<T> collection); //SAVE ALL
 }
