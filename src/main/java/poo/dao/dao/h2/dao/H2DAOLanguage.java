@@ -2,7 +2,6 @@ package poo.dao.dao.h2.dao;
 
 import poo.dao.beans.Language;
 
-import java.security.SecureRandom;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

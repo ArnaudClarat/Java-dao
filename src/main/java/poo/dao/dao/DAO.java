@@ -10,7 +10,7 @@ public interface DAO<T> {
 	
 	T update(T object); //UPDATE
 	
-	boolean delete(T object) throws SQLException; //DELETE
+	boolean delete(T object); //DELETE
 	
 	void saveAll(Collection<T> collection); //SAVE ALL
 }

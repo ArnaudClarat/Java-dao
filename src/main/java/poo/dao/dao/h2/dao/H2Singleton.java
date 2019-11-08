@@ -27,9 +27,9 @@ public class H2Singleton {
 		return connection;
 	}
 	// statement.getConnection().getMetaData().getTables(null, null, "SOCIETIES");
-	private static void createDB() throws SQLException {
+	private static void createDB() {
 		try (Statement statement = getInstance().createStatement()) {
-			ResultSet set = statement.getConnection().getMetaData().getTables(null, null, "SOCIETIES")
+			ResultSet set = getInstance().getMetaData().getTables("null", "null", "SOCIETIES", new String[0]);
 			createJunctionTable();
 			createLanguagesTable();
 			createEmployeesTable();
@@ -38,7 +38,7 @@ public class H2Singleton {
 		}
 	}
 	
-	private static void createJunctionTable() throws SQLException{
+	private static void createJunctionTable() {
 		String sql = "";
 	}
 	

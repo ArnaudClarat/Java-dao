@@ -1,6 +1,5 @@
 package poo.dao.dao.h2.dao;
 
-import poo.dao.beans.Society;
 import poo.dao.dao.DAO;
 
 import java.sql.Connection;
