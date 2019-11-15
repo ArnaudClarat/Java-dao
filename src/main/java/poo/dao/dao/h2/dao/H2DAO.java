@@ -16,7 +16,7 @@ public abstract class H2DAO<T> implements DAO<T> {
 		}
 	}
 	
-	/* INUTILE A NE PAS DE REPRODUIRE
+	/*
 		abstract void getSociety();
 		Utile pour définir des fonctions obligatoires dans les classes filles
 	*/

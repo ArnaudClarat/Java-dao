@@ -9,8 +9,7 @@ import java.sql.Statement;
 
 public class H2Singleton {
 	private static Connection connection;
-	private static JdbcDataSource source;
-	
+
 	public static final String URL = "jdbc:h2:mem:test";
 	public static final String USER = "SA";
 	public static final String PASS = "";
@@ -18,7 +17,7 @@ public class H2Singleton {
 	public static Connection getInstance() throws SQLException {
 		if (connection == null) {
 			// DB CONNECTION
-			source = new JdbcDataSource();
+			JdbcDataSource source = new JdbcDataSource();
 			source.setURL(URL);
 			source.setUser(USER);
 			source.setPassword(PASS);
@@ -26,7 +25,6 @@ public class H2Singleton {
 		}
 		return connection;
 	}
-	// statement.getConnection().getMetaData().getTables(null, null, "SOCIETIES");
 	private static void createDB() {
 		try (Statement statement = getInstance().createStatement()) {
 			ResultSet set = getInstance().getMetaData().getTables("null", "null", "SOCIETIES", new String[0]);
